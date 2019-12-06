@@ -17,18 +17,13 @@ it('renders without crashing', () => {
 
 
 //test title by text
-test('test some text', () => {
-  const { getByText } = render(<Player />)
+test('test Name title is on page', () => {
+  const { getByTestId } = render(<App />)
 
-  getByText(/name/i)
+  getByTestId(/main-header/i)
 })
 
-//test another title by text
-test('test some text', () => {
-  const { getByText } = render(<Player />)
 
-  getByText(/country/i)
-})
 
 
 

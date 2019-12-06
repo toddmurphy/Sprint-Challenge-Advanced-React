@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Sprint Challenge Home</h1>
+        <h1 data-testid='main-header'>Sprint Challenge Home</h1>
         <AddPlayerForm />
         <PlayerCard />
       </div>
