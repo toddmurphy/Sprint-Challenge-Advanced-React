@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useForm } from '../hooks/useForm';
+import {useForm} from '../hooks/useForm';
 
 //set initialFormValues
 
@@ -13,7 +13,7 @@ const initialFormValues = {
 const AddPlayerForm = () => {
 
     //setup and use 'useForm' 
-    const [values, handleSubmit, handleChanges] = useForm('addNewPlayer', initialFormValues);
+    const [values, clearForm, handleSubmit, handleChanges] = useForm('addNewPlayer', initialFormValues);
 
     return (
         <div>
@@ -26,7 +26,7 @@ const AddPlayerForm = () => {
                     value={values.name}
                     onChange={handleChanges}
                 />
-                <input
+                <input 
                     type='text'
                     placeholder='country'
                     name='country'
@@ -34,7 +34,7 @@ const AddPlayerForm = () => {
                     onChange={handleChanges}
                 />
                 <button>Submit</button>
-                {/* <button onClick={clearForm} >Clear</button> */}
+                <button onClick={clearForm} >Clear</button>
             </form>
         </div>
     )

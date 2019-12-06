@@ -21,11 +21,11 @@ export const useForm = (key, initialValues) => {
     }
 
     //clear form
-    // const clearForm = (event) => {
-    //     if (event) event.preventDefault();
-    //     setValues(initialValues)
-    // }
+    const clearForm = (event) => {
+        if (event) event.preventDefault();
+        setValues(initialValues)
+    }
 
 
-    return[values,  handleSubmit, handleChanges]
+    return[values, clearForm, handleSubmit, handleChanges]
 }
