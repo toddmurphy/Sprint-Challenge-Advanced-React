@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Player from './Player';
+import axios from 'axios';
 
 
 class PlayerCard extends Component {
@@ -8,7 +9,22 @@ class PlayerCard extends Component {
         players: []
     }
 
-    //get data from api --> 
+    //get data from api --> http://localhost:5000/api/players
+    //componentDidMount
+
+    componentDidMount(){
+        axios.get("http://localhost:5000/api/players")
+            .then(response => {
+                console.log(response)
+                this.setState({
+                    players: response
+                })
+            })
+            .catch(error => {
+                console.log('No player data returned', error)
+            })
+    }
+
 
 
     render() {
