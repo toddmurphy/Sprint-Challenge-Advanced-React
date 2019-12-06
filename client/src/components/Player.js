@@ -9,8 +9,8 @@ const Player = (props) => {
         <div>
             {/* <p data-testid='earth-header'>Name {name}</p>
             <p data-testid='planet-header'>Country {country}</p> */}
-            <p>Name {name}</p>
-            <p>Country {country}</p>
+            <p>Name: {name}</p>
+            <p>Country: {country}</p>
             <p>Number of searches: {searches}</p>
         </div>
     )
