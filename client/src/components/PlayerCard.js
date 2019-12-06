@@ -5,6 +5,7 @@ import axios from 'axios';
 
 class PlayerCard extends Component {
 // PlayerCard will hold state for Players
+//set initial state
     state = {
         players: []
     }
@@ -15,9 +16,9 @@ class PlayerCard extends Component {
     componentDidMount(){
         axios.get("http://localhost:5000/api/players")
             .then(response => {
-                console.log(response)
+                console.log(response.data)
                 this.setState({
-                    players: response
+                    players: response.data
                 })
             })
             .catch(error => {
@@ -28,13 +29,25 @@ class PlayerCard extends Component {
 
 
     render() {
+        //destructure this.state
+        const {players} = this.state;
+
         return (
-            <div>
-                <h2>Player card --> display all players</h2>
-                <Player />
-            </div>
+                       
+            players.map(player => {
+                //destructure 'id' from player
+                const {id} = player;
+
+                return <Player key={id} player={player} />
+            })
         )
     }
 }
 
 export default PlayerCard;
+
+// api response data structure
+// country: "United States"
+// id: 0
+// name: "Alex Morgan"
+// searches: 100

@@ -1,6 +1,19 @@
 import React from 'react';
 
+import {useForm} from '../hooks/useForm';
+
+//set initialFormValues
+
+const initialFormValues = {
+    name: '',
+    country: ''
+}
+
+
 const AddPlayerForm = () => {
+
+    //setup and use 'useForm' 
+    const [values, clearForm, handleSubmit, handleChanges] = useForm('addNewPlayer', initialFormValues);
 
     return (
         <div>
@@ -8,13 +21,13 @@ const AddPlayerForm = () => {
             <form>
                 <input
                     type='text'
-                    placeholder='First name'
-                    name='firstname'
+                    placeholder='Name'
+                    name='name'
                 />
-                <input
+                <input 
                     type='text'
-                    placeholder='Last name'
-                    name='lastname'
+                    placeholder='country'
+                    name='country'
                 />
                 <button>Submit</button>
                 <button>Clear</button>
