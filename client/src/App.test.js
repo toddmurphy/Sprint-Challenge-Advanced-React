@@ -14,26 +14,20 @@ it('renders without crashing', () => {
 });
 
 
-//text title by ID
-test('test title by ID', () => {
-  const { getbyTestID } = render(<Player />)
-
-  getbyTestID()
-})
 
 
 //test title by text
 test('test some text', () => {
   const { getByText } = render(<Player />)
 
-  getByText()
+  getByText(/name/i)
 })
 
 //test another title by text
 test('test some text', () => {
   const { getByText } = render(<Player />)
 
-  getByText()
+  getByText(/country/i)
 })
 
 
