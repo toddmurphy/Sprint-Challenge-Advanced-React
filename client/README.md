@@ -66,3 +66,18 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# First commit for Sprint Advanced React
+
+# I can't find the Answers.md file to add the question answers, so adding them here
+
+1. We would use class components over functional components (assuming hooks removed) primarily because class components can hold state (or data), whereas functional components would be for presentational, such as: displaying data, holding and/or displaying other components, or passing props to other components. Class components also hold numerous life cycle methods that help with additional functionality.
+
+2. Class components serve a purpose during the birth/mounting stage where methods and events occur, growth where state is set, and when components die and are removed from the DOM/screen. Three lifecycle methods are:
+- componentDidMount: loading data from internal or external 3rd party api.
+- componentDidUpdate: add event listeners if you need them
+- componentWillUnmount: remove event listeners or other clean up.
+
+3. The purpose of a custom hook is to build custom functions/hooks that help reduce code and share functionality across other functions. 
+
+4. It is import to test our app for the following reasons: reduce technical debt, reduce bugs during the development stage, trust the code, and make sure your app does what the users expect it.
